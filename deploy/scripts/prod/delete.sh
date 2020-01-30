@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
-helm delete plate \
+helm delete draco \
   --namespace default

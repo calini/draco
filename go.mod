@@ -1,6 +1,6 @@
-module go.ilie.io/templates/plate
+module github.com/calini/draco
 
-go 1.12
+go 1.13
 
 require (
 	github.com/gin-gonic/gin v1.4.0

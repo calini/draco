@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "plate.fullname" . }}
+  name: {{ include "draco.fullname" . }}
   labels:
-{{ include "plate.labels" . | indent 4 }}
+{{ include "draco.labels" . | indent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,5 +12,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: {{ include "plate.name" . }}
+    app.kubernetes.io/name: {{ include "draco.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

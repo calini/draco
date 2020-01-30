@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "plate.fullname" . }}
+  name: {{ include "draco.fullname" . }}
   labels:
-{{ include "plate.labels" . | indent 4 }}
+{{ include "draco.labels" . | indent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   strategy:
@@ -13,12 +13,12 @@ spec:
       maxUnavailable: {{ .Values.maxUnavailable }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "plate.name" . }}
+      app.kubernetes.io/name: {{ include "draco.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "plate.name" . }}
+        app.kubernetes.io/name: {{ include "draco.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
     {{- with .Values.imagePullSecrets }}

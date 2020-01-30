@@ -3,7 +3,7 @@ maxSurge: 1
 maxUnavailable: 0
 
 image:
-  repository: docker.io/calini/plate
+  repository: docker.io/calini/draco
   tag: latest
   pullPolicy: Always
 
@@ -13,7 +13,7 @@ ingress:
     kubernetes.io/ingress.class: traefik
   # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: plate.ilie.io
+    - host: draco.ilie.io
       paths: [/]
 
   tls: []
