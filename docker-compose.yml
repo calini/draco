@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+
+  plate:
+    build: .
+    image: docker.pkg.github.com/calini/plate/plate:dev
+    ports:
+      - "8080:8080"
