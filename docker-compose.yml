@@ -4,6 +4,6 @@ services:
 
   draco:
     build: .
-    image: docker.io/calini/draco:dev
+    image: calini/draco:dev
     ports:
       - "8080:8080"
