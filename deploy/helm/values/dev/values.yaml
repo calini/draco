@@ -14,7 +14,7 @@ ingress:
   # kubernetes.io/tls-acme: "true"
   hosts:
     - host: draco.dev.ilie.io
-      paths: [/]
+      paths: [/api, /health]
 
   tls: []
   #  - secretName: chart-example-tls
