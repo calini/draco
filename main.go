@@ -4,6 +4,7 @@ import (
 	"github.com/calini/draco/integrations"
 	"github.com/calini/draco/setup"
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 	log "github.com/sirupsen/logrus"
 	"net/http"
@@ -15,6 +16,13 @@ const (
 	addr    = ":8080"
 )
 
+// init is invoked before main()
+func init() {
+	// loads values from .env into the system
+	if err := godotenv.Load(); err != nil {
+		log.Print("No .env file found")
+	}
+}
 func main() {
 	r := setup.Router()
 
@@ -32,7 +40,7 @@ func main() {
 		if !ok {
 			log.Warnf("env var SNYK_TOKEN required for Snyk Integration")
 		}
-		api.Group("/snyk").GET("/", integrations.ProxySnyk(snykToken))
+		api.Group("/snyk").Any("*path", integrations.ProxySnyk(snykToken))
 }
 
 	if err := setup.RunDefault(r, addr); err != nil {

@@ -9,7 +9,8 @@ import (
 )
 
 const (
-	snykURL = "https://snyk.io/api/v1/"
+	snykURL = "https://snyk.io/"
+	snykAPIPath = "api/v1/"
 )
 
 func ProxySnyk(token string) func(c *gin.Context) {
@@ -20,9 +21,10 @@ func ProxySnyk(token string) func(c *gin.Context) {
 			c.String(http.StatusInternalServerError, "internal server error")
 			return
 		}
-		c.Header("Authorization", "token " + token)
 		proxy := httputil.NewSingleHostReverseProxy(u)
 		c.Request.Host = u.Host
+		c.Request.URL.Path = snykAPIPath + c.Param("path")
+		c.Request.Header["Authorization"] = []string{"token " + token}
 		proxy.ServeHTTP(c.Writer, c.Request)
 	}
 }
