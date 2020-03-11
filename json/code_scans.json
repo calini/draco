@@ -1,0 +1,37 @@
+{
+    "JSON": [
+        {
+            "repo": "github.com/calini/draco",
+            "source": "Console",
+            "source_logo": "terminal.png",
+            "overall_severity": "9.7",
+            "vulnerabilities": {
+                "high": 3,
+                "med": 5,
+                "low": 1
+            }
+        },
+        {
+            "repo": "github.com/calini/draco-web",
+            "source": "GitHub",
+            "source_logo": "github.png",
+            "overall_severity": "3.0",
+            "vulnerabilities": {
+                "high": 0,
+                "med": 3,
+                "low": 1
+            }
+        },
+        {
+            "repo": "github.com/calini/grape",
+            "source": "GitHub",
+            "source_logo": "github.png",
+            "overall_severity": "4.0",
+            "vulnerabilities": {
+                "high": 1,
+                "med": 4,
+                "low": 0
+            }
+        }
+    ]
+}

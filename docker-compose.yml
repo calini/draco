@@ -7,3 +7,15 @@ services:
     image: calini/draco:dev
     ports:
       - "8080:8080"
+    links:
+      - db
+    environment:
+      DATABASE_HOST: "db"
+      DATABASE_PORT: "5432"
+
+  db:
+    image: postgres
+    ports:
+    - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: whatever

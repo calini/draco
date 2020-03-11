@@ -1,0 +1,22 @@
+{
+  "JSON": [
+    {
+      "host": "10.1.2.3",
+      "hostName": "test-vm-1.local",
+      "overall_threat": "High",
+      "overall_severity": "9.7"
+    },
+    {
+      "host": "10.1.2.3",
+      "hostName": "test-vm-2.local",
+      "overall_threat": "Medium",
+      "overall_severity": "6.0"
+    },
+    {
+      "host": "10.1.2.3",
+      "hostName": "test-vm-3.local",
+      "overall_threat": "Medium",
+      "overall_severity": "3.0"
+    }
+  ]
+}

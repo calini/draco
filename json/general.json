@@ -1,0 +1,44 @@
+{
+  "ip_scan": {
+    "count": 2,
+    "worst_offender": "10",
+    "details": [
+      {
+        "ip": "10.1.1.1",
+        "open_ports": 10,
+        "closed_ports": 0,
+        "filtered_ports": 990
+      },
+      {
+        "ip": "10.1.1.2",
+        "open_ports": 2,
+        "closed_ports": 8,
+        "filtered_ports": 990
+      }
+    ]
+  },
+  "vuln_scan": {
+    "count": 2,
+    "worst_offender": "9.7",
+    "details": [
+      {
+        "host": "10.1.2.3",
+        "hostName": "test-vm-1.local",
+        "overall_threat": "High",
+        "overall_severity": "9.7"
+      },
+      {
+        "host": "10.1.2.3",
+        "hostName": "test-vm-2.local",
+        "overall_threat": "Medium",
+        "overall_severity": "6.0"
+      },
+      {
+        "host": "10.1.2.3",
+        "hostName": "test-vm-3.local",
+        "overall_threat": "Medium",
+        "overall_severity": "3.0"
+      }
+    ]
+  }
+}

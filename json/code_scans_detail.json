@@ -1,0 +1,22 @@
+{
+    "repo": "github.com/calini/draco",
+    "source": "Console",
+    "source_logo": "terminal.png",
+    "overall_severity": "9.7",
+    "vulnerabilities": {
+        "high": 3,
+        "med": 5,
+        "low": 1
+    },
+    "details": {
+        "runtime": "Golang",
+        "dependencies": 17,
+        "vulnerable_dependencies": 9,
+        "manifest": "go.mod",
+        "owner": {
+            "name": "Calin Ilie",
+            "account": "github.com/calini",
+            "email": "calin@ilie.io"
+        },
+    }
+},
