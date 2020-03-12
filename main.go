@@ -34,6 +34,10 @@ func main() {
 
 		// TODO swtich to actual calls
 		api.StaticFile("/general", "json/general.json")
+		api.StaticFile("/ports", "json/ip_scans.json")
+		api.StaticFile("/ports/1", "json/ip_scan_detail.json")
+		api.StaticFile("/vulns", "json/vuln_scans.json")
+		api.StaticFile("/vulns/1", "json/vuln_scan_detail.json")
 
 		// Snyk Integration
 		snykToken, ok := os.LookupEnv("SNYK_TOKEN")
