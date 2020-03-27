@@ -26,3 +26,9 @@ To run this project directly
 ```sh
 make run
 ```
+
+## Docker
+To build the Docker container, just run
+```sh
+docker build -t calini/draco:dev .
+```
