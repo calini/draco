@@ -1,5 +1,5 @@
 GO      = go
-OUT     = /out
+OUT     = out
 GO111MODULE ?= on
 
 DOCKER  = docker
@@ -9,7 +9,7 @@ run:
 	$(GO) run .
 
 build:
-	$(GO) build .
+	$(GO) build -o $(OUT)/main .
 
 test:
 	$(GO) test -count=1 ./...
