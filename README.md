@@ -1,12 +1,11 @@
-# Draco
+# Draco BE
 
 [![Build Status](https://travis-ci.org/calini/draco.svg?branch=master)](https://travis-ci.org/calini/draco)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcalini%2Fdraco.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcalini%2Fdraco?ref=badge_shield)
 
-A vulnerability management system for open source projects
+A vulnerability management system for open source projects;
 
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcalini%2Fdraco.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcalini%2Fdraco?ref=badge_large)
+This is the back-end necessary to run the [Draco](https://github.com/calini/draco-web) dashboard.
 
 ## Snyk Token
 For the Snyk integration you will need to fetch an API token. In order to add it to the project, take the following steps:
@@ -32,3 +31,6 @@ To build the Docker container, just run
 ```sh
 docker build -t calini/draco:dev .
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcalini%2Fdraco.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcalini%2Fdraco?ref=badge_large)
